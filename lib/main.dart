@@ -1,7 +1,7 @@
 import 'home.dart';
 import 'information.dart';
-//import 'records.dart';
-// import 'category.dart';
+import 'records.dart';
+import 'category.dart';
 import 'about.dart';
 import 'drawer.dart';
 
@@ -12,6 +12,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -20,8 +21,8 @@ class _MyAppState extends State<MyApp> {
   final tabs = [
     Center(child: Home()),
     Center(child: Information()),
-    //Center(child: Records()),
-    //Center(child: Category()),
+    Center(child: StudentRecordDataTable()),
+    Center(child: Category()),
     Center(child: About()),
   ];
   int _currentIndex = 0;
@@ -40,9 +41,11 @@ class _MyAppState extends State<MyApp> {
 
         drawer: AppDrawer(
           onItemSelected: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
+            if (index >= 0 && index < tabs.length) {
+              setState(() {
+                _currentIndex = index;
+              });
+            }
           },
         ),
 
@@ -61,7 +64,10 @@ class _MyAppState extends State<MyApp> {
               icon: Icon(Icons.person),
               label: 'Students',
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Records'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: 'Records',
+            ),
           ],
           onTap: (index) {
             setState(() {

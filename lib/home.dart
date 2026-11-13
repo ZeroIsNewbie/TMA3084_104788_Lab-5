@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -12,7 +11,6 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             // Application Name
             Text(
               'StudentHub',
@@ -28,10 +26,7 @@ class Home extends StatelessWidget {
             // Welcome Message
             Text(
               'Welcome to StudentHub! Manage student information easily.',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.black54,
-              ),
+              style: TextStyle(fontSize: 16, color: Colors.black54),
             ),
 
             SizedBox(height: 20),
@@ -51,10 +46,7 @@ class Home extends StatelessWidget {
             // Student Information Summary
             Text(
               'Student Overview',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
 
             SizedBox(height: 15),
@@ -68,8 +60,7 @@ class Home extends StatelessWidget {
                       padding: EdgeInsets.all(16),
                       child: Column(
                         children: [
-                          Icon(Icons.people,
-                              color: Colors.blue, size: 35),
+                          Icon(Icons.people, color: Colors.blue, size: 35),
                           SizedBox(height: 8),
                           Text(
                             '120',
@@ -91,8 +82,7 @@ class Home extends StatelessWidget {
                       padding: EdgeInsets.all(16),
                       child: Column(
                         children: [
-                          Icon(Icons.school,
-                              color: Colors.green, size: 35),
+                          Icon(Icons.school, color: Colors.green, size: 35),
                           SizedBox(height: 8),
                           Text(
                             '5',
@@ -118,8 +108,7 @@ class Home extends StatelessWidget {
                       padding: EdgeInsets.all(16),
                       child: Column(
                         children: [
-                          Icon(Icons.male,
-                              color: Colors.purple, size: 35),
+                          Icon(Icons.male, color: Colors.purple, size: 35),
                           SizedBox(height: 8),
                           Text(
                             '65',
@@ -141,8 +130,7 @@ class Home extends StatelessWidget {
                       padding: EdgeInsets.all(16),
                       child: Column(
                         children: [
-                          Icon(Icons.female,
-                              color: Colors.orange, size: 35),
+                          Icon(Icons.female, color: Colors.orange, size: 35),
                           SizedBox(height: 8),
                           Text(
                             '55',
