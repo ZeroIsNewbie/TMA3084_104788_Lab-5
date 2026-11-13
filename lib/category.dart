@@ -7,40 +7,46 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 5,
-      child: Column(
-        children: <Widget>[
-          TabBar(
-            labelColor: Colors.black,
-            unselectedLabelColor: Colors.teal,
-            indicatorColor: Colors.cyanAccent,
-            labelStyle: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Arial',
-              fontSize: 20.0,
+    return Container(
+      color: Colors.pink.shade50,
+      child: DefaultTabController(
+        length: 5,
+        child: Column(
+          children: <Widget>[
+            Material(
+              color: Colors.white,
+              child: TabBar(
+                labelColor: Colors.pink,
+                unselectedLabelColor: Colors.pink.shade200,
+                indicatorColor: Colors.pinkAccent,
+                labelStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Arial',
+                  fontSize: 16.0,
+                ),
+                tabs: [
+                  Tab(text: "Software Engineering"),
+                  Tab(text: "Computational Science"),
+                  Tab(text: "Multimedia Computing"),
+                  Tab(text: "Network Computing"),
+                  Tab(text: "Data Engineering"),
+                ],
+              ),
             ),
-            tabs: [
-              Tab(text: "Software Engineering"),
-              Tab(text: "Computational Science"),
-              Tab(text: "Multimedia Computing"),
-              Tab(text: "Network Computing"),
-              Tab(text: "Data Engineering"),
-            ],
-          ),
 
-          Expanded(
-            child: TabBarView(
-              children: [
-                ProgramScreen(programName: "Software Engineering"),
-                ProgramScreen(programName: "Computational Science"),
-                ProgramScreen(programName: "Multimedia Computing"),
-                ProgramScreen(programName: "Network Computing"),
-                ProgramScreen(programName: "Data Engineering"),
-              ],
+            Expanded(
+              child: TabBarView(
+                children: [
+                  ProgramScreen(programName: "Software Engineering"),
+                  ProgramScreen(programName: "Computational Science"),
+                  ProgramScreen(programName: "Multimedia Computing"),
+                  ProgramScreen(programName: "Network Computing"),
+                  ProgramScreen(programName: "Data Engineering"),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -62,8 +68,14 @@ class ProgramScreen extends StatelessWidget {
         final user = filteredUsers[index];
 
         return Card(
+          color: Colors.white,
+          shadowColor: Colors.pink.withValues(alpha: 0.25),
           child: ListTile(
-            title: Text(user.name),
+            leading: const Icon(Icons.person, color: Colors.pink),
+            title: Text(
+              user.name,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
             subtitle: Text(
               'Matric No.: ${user.matricNo}    CGPA: ${user.cgpa}',
             ),
