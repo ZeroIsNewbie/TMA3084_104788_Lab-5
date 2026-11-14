@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 class AppDrawer extends StatelessWidget {
   final Function(int) onItemSelected;
 
-  const AppDrawer({
-    super.key,
-    required this.onItemSelected,
-  });
+  const AppDrawer({super.key, required this.onItemSelected});
 
   @override
   Widget build(BuildContext context) {

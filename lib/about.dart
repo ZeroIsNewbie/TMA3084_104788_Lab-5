@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class About extends StatelessWidget {
@@ -11,16 +10,13 @@ class About extends StatelessWidget {
         children: [
           Stack(
             children: [
-
               //University Picture
               Container(
                 height: 220,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/about_university.jpg',
-                    ),
+                    image: AssetImage('assets/images/about_university.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -49,9 +45,7 @@ class About extends StatelessWidget {
                 child: CircleAvatar(
                   radius: 50,
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage(
-                    'assets/images/app_logo.jpg',
-                  ),
+                  backgroundImage: AssetImage('assets/images/app_logo.jpg'),
                 ),
               ),
 
@@ -73,10 +67,7 @@ class About extends StatelessWidget {
 
                     Text(
                       'Student Management Application',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
                   ],
                 ),
@@ -111,9 +102,9 @@ class About extends StatelessWidget {
 
                   Text(
                     'StudentHub is a student management application '
-                        'designed to organise and manage student information '
-                        'and academic records efficiently. It provides a '
-                        'convenient way to view student details and records.',
+                    'designed to organise and manage student information '
+                    'and academic records efficiently. It provides a '
+                    'convenient way to view student details and records.',
                     style: TextStyle(fontSize: 15),
                     textAlign: TextAlign.justify,
                   ),
@@ -158,14 +149,9 @@ class About extends StatelessWidget {
                   ),
 
                   ListTile(
-                    leading: Icon(
-                      Icons.account_balance,
-                      color: Colors.pink,
-                    ),
+                    leading: Icon(Icons.account_balance, color: Colors.pink),
                     title: Text('Institution'),
-                    subtitle: Text(
-                      'Universiti Malaysia Sarawak (UNIMAS)',
-                    ),
+                    subtitle: Text('Universiti Malaysia Sarawak (UNIMAS)'),
                   ),
                 ],
               ),
@@ -202,10 +188,7 @@ class About extends StatelessWidget {
                   ),
 
                   ListTile(
-                    leading: Icon(
-                      Icons.table_chart,
-                      color: Colors.pink,
-                    ),
+                    leading: Icon(Icons.table_chart, color: Colors.pink),
                     title: Text('Student Records'),
                     subtitle: Text('View organised student records'),
                   ),
@@ -225,10 +208,7 @@ class About extends StatelessWidget {
           // Footer
           Text(
             'Developed using Flutter',
-            style: TextStyle(
-              color: Colors.black54,
-              fontSize: 13,
-            ),
+            style: TextStyle(color: Colors.black54, fontSize: 13),
           ),
 
           SizedBox(height: 20),
